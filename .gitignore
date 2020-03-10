@@ -43,5 +43,12 @@ qtcreator-*
 # Emacs
 .#*
 
+# Archives
+*.gz
+
+# Old version files
+*.old
+*.old2
+
 # Catkin custom files
 CATKIN_IGNORE

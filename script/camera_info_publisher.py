@@ -36,8 +36,8 @@ class CameraInfoPublisher:
         rospy.Subscriber("/null/left/camera_info", CameraInfo, self.leftCallback)
         rospy.Subscriber("/null/right/camera_info", CameraInfo, self.rightCallback)
 
-        self.left_pub = rospy.Publisher(left_topic,CameraInfo) 
-        self.right_pub = rospy.Publisher(right_topic,CameraInfo) 
+        self.left_pub = rospy.Publisher(left_topic,CameraInfo, queue_size=10) 
+        self.right_pub = rospy.Publisher(right_topic,CameraInfo, queue_size=10) 
 
     def leftPublish(self):
         '''
